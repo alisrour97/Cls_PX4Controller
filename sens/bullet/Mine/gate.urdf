@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot name="gate">
+  <link name="base_link">
+    <inertial>
+      <mass value="1"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.5 0.05 1"/>
+      </geometry>
+      <material name="wood_color">
+        <color rgba="0.6 0.4 0.2 1"/>
+      </material>
+    </visual>
+  </link>
+
+  <joint name="vertical_joint1" type="fixed">
+    <origin rpy="0 0 0" xyz="0 -0.5 0"/>
+    <parent link="base_link"/>
+    <child link="vertical_link1"/>
+  </joint>
+  <link name="vertical_link1">
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.05 0.5 1"/>
+      </geometry>
+      <material name="wood_color"/>
+    </visual>
+  </link>
+
+  <joint name="vertical_joint2" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0.5 0"/>
+    <parent link="base_link"/>
+    <child link="vertical_link2"/>
+  </joint>
+  <link name="vertical_link2">
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.05 0.5 1"/>
+      </geometry>
+      <material name="wood_color"/>
+    </visual>
+  </link>
+
+  <joint name="horizontal_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="vertical_link1"/>
+    <child link="horizontal_link"/>
+  </joint>
+  <link name="horizontal_link">
+    <inertial>
+      <mass value="0.01"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+        <box size="0.5 0.05 1"/>
+      </geometry>
+      <material name="wood_color"/>
+    </visual>
+  </link>
+</robot>
