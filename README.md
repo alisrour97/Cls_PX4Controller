@@ -1,7 +1,7 @@
 Project dedicated for sensiitivity experiments.
 Robust trajectory generation based on the PX4 controller for Acanthis drone below.
 
-![Acanthis](Acanthis_description.pdf)
+![Acanthis](Acanthis.png)
 
 ## Getting Started
 
